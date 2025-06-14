@@ -1,0 +1,116 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
+
+.markdown-content {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3 {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+}
+
+.markdown-content p {
+  margin-bottom: 1em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  margin-left: 1.5em;
+  margin-bottom: 1em;
+  list-style-position: outside; /* Ensure bullets/numbers are outside */
+}
+
+.markdown-content li {
+  margin-bottom: 0.5em;
+}
+
+.markdown-content strong {
+  font-weight: bold;
+  color: #0056b3; /* A bit more prominent color for bold text */
+}
+
+.sources-section ul {
+  list-style: none; /* Remove default bullet points for sources */
+  padding-left: 0;
+}
+
+.sources-section li {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-size: 0.95em;
+  color: #555;
+}
+
+.sources-section li strong {
+    color: #4CAF50; /* Highlight source number/title */
+}
+
+.source-content {
+    display: block; /* Ensures truncate text is on its own line */
+    margin-top: 0.25rem;
+    color: #777;
+}
+
+details {
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+summary {
+    font-weight: 500;
+    color: #007bff;
+    text-decoration: underline;
+}
+
+summary:hover {
+    color: #0056b3;
+}
+
+/* Added loading indicator */
+.loading-indicator {
+    margin-top: 1rem;
+    color: #666;
+    font-style: italic;
+}
