@@ -33,8 +33,50 @@ Track user satisfaction in your AI chatbot using a lightweight thumbs up/down fe
 ## Setup and Deployment
 
 - **Clone the repo**
+- **Create Weights and Biases Trial account**
+- **Deploy gpt-4o and text-embeddings-ada-002**
 - **Install dependencies**
+
+```
+npm install
+```
+
 - **Configure environment**
+
+```env
+
+AZURE_SEARCH_ENDPOINT=
+AZURE_SEARCH_KEY=
+AZURE_SEARCH_INDEX=
+
+AZURE_OPENAI_ENDPOINT=
+AZURE_OPENAI_KEY=
+AZURE_OPENAI_DEPLOYMENT=
+
+AZURE_OPENAI_EMBEDDING_DEPLOYMENT=
+```
+- **Get the Data or use the sample Notebook**
+  
+***extractblog.py***
+
+- **Create Azure AI Search with Notebooks and upload content and embeddings**
+
+ ***create_azure_ai_index.ipynb***
+ 
+ ***embed_and_upload_blog_docs.ipynb***
+
+- **Run Local Dev**
+
+ ```
+uvicorn app.main:app --reload - Python backend
+npm run dev - Vue frontend
+ ``` 
+
+## Sample Dashboard
+
+![wnball](https://github.com/user-attachments/assets/cf393ba2-87b4-4726-ba12-be511d92ebb0)
+
+
 
 ## Contributing
 
